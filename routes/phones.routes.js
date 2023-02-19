@@ -10,14 +10,14 @@ module.exports = (app) => {
     });
 
     app.post("/phones", (req, res, next) => {
-        controller.createPhones(req, res, next);
+        controller.createPhone(req, res, next);
     });
 
     app.put("/phones", (req, res, next) => {
-        controller.updatePhones(req, res, next);
+        controller.updatePhone(req, res, next);
     });
 
     app.delete("/phones", (req, res, next) => {
-        controller.deletePhones(req, res, next);
+        controller.deletePhone(req, res, next);
     });
 };
