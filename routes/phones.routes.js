@@ -5,8 +5,8 @@ module.exports = (app) => {
         controller.getAll(req, res, next);
     });
 
-    app.get("/phones/bydocument/:document", (req, res, next) => {
-        controller.getByDocument(req, res, next);
+    app.get("/phones/byMarca/:marca", (req, res, next) => {
+        controller.getbyMarca(req, res, next);
     });
 
     app.post("/phones", (req, res, next) => {

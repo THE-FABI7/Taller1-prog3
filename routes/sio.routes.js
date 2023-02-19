@@ -5,8 +5,8 @@ module.exports = (app) => {
         controller.getAll(req, res, next);
     });
 
-    app.get("/sio/bydocument/:document", (req, res, next) => {
-        controller.getByDocument(req, res, next);
+    app.get("/sio/bynombre/:nombre", (req, res, next) => {
+        controller.getbynombre(req, res, next);
     });
 
     app.post("/sio", (req, res, next) => {
