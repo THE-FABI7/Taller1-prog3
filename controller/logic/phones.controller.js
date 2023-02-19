@@ -2,6 +2,7 @@
 const phonesDto = require("../../model/dto/phones.dto");
 
 exports.createPhone = (req, res, next) => {
+  /* Creating a new object with the same name as the properties of the object. */
   let phone = {
     ip: req.body.ip,
     modelo: req.body.modelo,
