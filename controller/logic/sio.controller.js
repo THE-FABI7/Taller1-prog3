@@ -1,6 +1,7 @@
 // dto
 const sioDto = require("../../model/dto/sio.dto");
 
+/* A function that creates a new object in the database. */
 exports.createSio = (req, res, next) => {
   let sio = {
     nombre: req.body.nombre,
@@ -21,6 +22,7 @@ exports.createSio = (req, res, next) => {
   });
 };
 
+/* A function that updates an object in the database. */
 exports.updateSio = (req, res, next) => {
   let sio = {
     nombre: req.body.nombre,
@@ -41,6 +43,7 @@ exports.updateSio = (req, res, next) => {
   });
 };
 
+/* A function that returns all the objects in the database. */
 exports.getAll = (req, res, next) => {
   sioDto.getAll({}, (err, data) => {
     if (err) {
@@ -55,6 +58,7 @@ exports.getAll = (req, res, next) => {
 };
 
 
+/* A function that returns objects by name in the database. */
 exports.getbynombre = (req, res, next) => {
     sioDto.getbynombre({ nombre: req.params.nombre }, (err, data) => {
       if (err) {
@@ -68,6 +72,7 @@ exports.getbynombre = (req, res, next) => {
     });
 }
 
+/* A function that deletes an object in the database. */
 exports.deleteSio = () => {
     sioDto.delete({version: req.params.version}, (err, data) => {
       if (err) {
