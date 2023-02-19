@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+/**Schema needed for the sio's */
 const sioSchemas = new mongoose.Schema({
   nombre: {
     type: String,

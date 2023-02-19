@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("mongoose-unique-validator");
-
+/**Needed schema for phones */
 const phonesSchema = new mongoose.Schema({
   ip: {
     type: String,

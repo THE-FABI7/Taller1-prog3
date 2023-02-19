@@ -24,7 +24,7 @@ exports.createPhone = (req, res, next) => {
     });
   });
 };
-
+/**Allows to edit an already existing phone */
 exports.updatePhone = (req, res, next) => {
   let phone = {
     ip: req.body.ip,
@@ -47,7 +47,7 @@ exports.updatePhone = (req, res, next) => {
     });
   });
 };
-
+/**Allows to get all the phones in the db */
 exports.getAll = (req, res, next) => {
   phonesDto.getAll((err, data) => {
     if (err) {
@@ -62,7 +62,7 @@ exports.getAll = (req, res, next) => {
 }
 
 
-
+/**Allows to get phones filtered by marca */
 exports.getbyMarca = (req, res, next) => {
   phonesDto.getbyMarca(req.params.marca, (err, data) => {
     if (err) {
@@ -75,7 +75,7 @@ exports.getbyMarca = (req, res, next) => {
     });
   });
 };
-
+/**Allows to delete one register from the db */
 exports.deletePhone = () => {
   phonesDto.delete({ _ip: req.params.ip }, phone, (err) => {
     if (err) {

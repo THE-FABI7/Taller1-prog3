@@ -1,4 +1,5 @@
 const controller = require("../controller/logic/sio.controller");
+/**Declares the paths and their functionality */
 
 module.exports = (app) => {
     app.get("/sio", (req, res, next) => {

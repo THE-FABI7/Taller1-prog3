@@ -5,6 +5,7 @@ const db = require("../db-connection/mongodb");
 const schema = require("../schemas/sio.schemas");
 
 db();
+/**Declares the data managemet functions */
 
 schema.statics = {
   create: function (data, callback) {

@@ -1,5 +1,5 @@
 const controller = require("../controller/logic/phones.controller");
-
+/**Declares the paths and their functionality */
 module.exports = (app) => {
     app.get("/phones", (req, res, next) => {
         controller.getAll(req, res, next);

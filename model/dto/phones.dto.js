@@ -5,7 +5,7 @@ const db = require("../db-connection/mongodb")
 const schema = require("../schemas/phones.schemas")
 
 db();
-
+/**Declares the data managemet functions */
 schema.statics = {
     create: function (data, callback) {
         let doc =  new this(data);
